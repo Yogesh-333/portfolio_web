@@ -2,7 +2,7 @@ import 'package:YK_portfolio/pages/home/components/carousel.dart';
 import 'package:YK_portfolio/pages/home/components/education_section.dart';
 import 'package:YK_portfolio/pages/home/components/experience_section%20.dart';
 import 'package:YK_portfolio/pages/home/components/footer.dart';
-import 'package:YK_portfolio/pages/home/components/ios_app_ad.dart';
+import 'package:YK_portfolio/pages/home/components/FlutterAppAd.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -90,11 +90,7 @@ class HeaderRow extends StatelessWidget {
                         padding: EdgeInsets.symmetric(
                             horizontal: 20.0, vertical: 5.0),
                         child: TextButton(
-                          onPressed: item.title == "HIRE ME"
-                              ? item.onTap
-                              : () {
-                                  _scrollToSection(item.Gkey);
-                                },
+                          onPressed: item.onTap,
                           child: Text(
                             item.title,
                             style: TextStyle(
@@ -111,11 +107,9 @@ class HeaderRow extends StatelessWidget {
                       child: Container(
                         margin: EdgeInsets.only(right: 30.0),
                         child: GestureDetector(
-                          onTap: item.title == "HIRE ME"
-                              ? item.onTap
-                              : () {
-                                  _scrollToSection(item.Gkey);
-                                },
+                          onTap: () {
+                            _scrollToSection(item.Gkey);
+                          },
                           child: Text(
                             item.title,
                             style: TextStyle(
@@ -192,6 +186,7 @@ class Header extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          HeaderLogo(),
           HeaderRow(),
         ],
       ),

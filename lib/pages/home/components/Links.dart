@@ -13,12 +13,12 @@ final List<Map<String, String>> links = [
   {
     "name": "GitHub",
     "image": "assets/GitHub.png",
-    "url": "https://github.com/yogeshkumar333"
+    "url": "https://github.com/Yogesh-333"
   },
   {
     "name": "Blog",
     "image": "assets/Blogger.png",
-    "url": "https://medium.com/@yogeshkumar333"
+    "url": "https://unknownauthor-poems.blogspot.com/"
   },
 ];
 
