@@ -45,6 +45,7 @@ class FlutterAppAd extends StatelessWidget {
                       options: CarouselOptions(
                         height: constraints.maxWidth > 720.0 ? null : 350.0,
                         autoPlay: true,
+                        autoPlayInterval: Duration(seconds: 2),
                         aspectRatio: 1.5,
                         enlargeCenterPage: true,
                       ),

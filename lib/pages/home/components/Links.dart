@@ -54,7 +54,7 @@ Widget _buildUi(double width, BuildContext context) {
                 height: 80.0,
                 width: ScreenHelper.isMobile(context)
                     ? constraints.maxWidth / 3.0 - 50.0
-                    : constraints.maxWidth / 5.0 - 50.0,
+                    : constraints.maxWidth / 6.0 - 50.0,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.black,

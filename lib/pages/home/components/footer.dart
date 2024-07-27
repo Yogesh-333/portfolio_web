@@ -41,12 +41,14 @@ final List<FooterItem> footerItems = [
 class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      key: FooterKey,
-      child: ScreenHelper(
-        desktop: _buildUi(kDesktopMaxWidth, context),
-        tablet: _buildUi(kTabletMaxWidth, context),
-        mobile: _buildUi(getMobileMaxWidth(context), context),
+    return Center(
+      child: Container(
+        key: FooterKey,
+        child: ScreenHelper(
+          desktop: _buildUi(kDesktopMaxWidth, context),
+          tablet: _buildUi(kTabletMaxWidth, context),
+          mobile: _buildUi(getMobileMaxWidth(context), context),
+        ),
       ),
     );
   }
@@ -79,10 +81,10 @@ Widget _buildUi(double width, BuildContext context) {
                               : constraints.maxWidth / 4.0 - 20.0,
                           child: Container(
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset(
                                       footerItem.iconPath,

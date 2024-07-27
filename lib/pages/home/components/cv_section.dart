@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:YK_portfolio/models/design_process.dart';
@@ -85,13 +86,27 @@ class CvSection extends StatelessWidget {
                 },
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
-                  child: Text(
-                    "DOWNLOAD CV",
-                    style: GoogleFonts.oswald(
-                      color: Colors.blue, // Replace with your color variable
-                      fontWeight: FontWeight.w900,
-                      fontSize: 16.0,
-                    ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "DOWNLOAD CV",
+                        style: GoogleFonts.oswald(
+                          color:
+                              Colors.blue, // Replace with your color variable
+                          fontWeight: FontWeight.w900,
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      SizedBox(
+                          width:
+                              8.0), // Add some space between the text and the icon
+                      Icon(
+                        FontAwesomeIcons.download,
+                        color: Colors.blue, // Replace with your color variable
+                        size: 16.0,
+                      ),
+                    ],
                   ),
                 ),
               ),
