@@ -77,7 +77,7 @@ class CvSection extends StatelessWidget {
                 onTap: () {
                   // URL to the PDF file on Google Drive
                   const pdfUrl =
-                      'https://drive.google.com/file/d/1C1vckQcPae-8gcpkbkKGJ_qZcM7-yrwe/view?usp=sharing';
+                      'https://drive.google.com/file/d/1-DPfomKX52JQfS-1ICsnh5FeHkBA5w4F/view?usp=sharing';
 
                   // Create an anchor element and trigger a download
                   final anchor = html.AnchorElement(href: pdfUrl)
