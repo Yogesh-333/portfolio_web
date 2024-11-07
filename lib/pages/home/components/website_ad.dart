@@ -55,7 +55,7 @@ class BackednAd extends StatelessWidget {
                           height: 15.0,
                         ),
                         Text(
-                          "India Health Link",
+                          "H-Pod",
                           style: GoogleFonts.oswald(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
@@ -67,7 +67,7 @@ class BackednAd extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          "Developed a robust backend system for IHL, focusing on API creation and database management. Implemented secure user authentication and optimized server performance.",
+                          "Developed a robust Cloud based backend system for IHL applications, focusing on API creation and database management. Implemented secure user authentication and optimized server performance.",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
@@ -75,41 +75,69 @@ class BackednAd extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 25.0,
+                          height: 50.0,
                         ),
-                        MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: kPrimaryColor,
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            height: 48.0,
-                            width: 200,
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 28.0,
-                            ),
-                            child: TextButton(
-                              onPressed: () async {
-                                await launchUrl(Uri.parse(
-                                    'https://dashboard.indiahealthlink.com/dashboard'));
-                              },
-                              child: Center(
-                                child: Text(
-                                  "EXPLORE MORE",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13.0,
-                                    fontWeight: FontWeight.bold,
+                        Row(
+                          children: [
+                            MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: kPrimaryColor,
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                height: 48.0,
+                                width: 160,
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 28.0,
+                                ),
+                                child: TextButton(
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        'https://dashboard.indiahealthlink.com/dashboard'));
+                                  },
+                                  child: Center(
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.public, color: Colors.white),
+                                        SizedBox(width: 5.0),
+                                        Text(
+                                          "Website",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 13.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
+                            TextButton(
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      _buildIHLHPODDetailsDialog(context),
+                                );
+                              },
+                              child: MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: Text(
+                                  "Know More >>>",
+                                  style: TextStyle(
+                                    color: kPrimaryColor,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 70.0,
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -156,4 +184,64 @@ class BackednAd extends StatelessWidget {
       ),
     );
   }
+}
+
+// In website_ad.dart
+
+Widget _buildIHLHPODDetailsDialog(BuildContext context) {
+  return AlertDialog(
+    backgroundColor: kBackgroundColor,
+    title: Text(
+      "Project Details",
+      style: GoogleFonts.oswald(
+        color: Colors.white,
+        fontWeight: FontWeight.w900,
+      ),
+    ),
+    content: Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Project Name: IHL HPOD",
+          style: GoogleFonts.oswald(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "Description: A health kiosk system designed to integrate with the IHL platform, supporting data-driven health monitoring and patient data management.",
+          style: TextStyle(color: kCaptionColor),
+        ),
+        SizedBox(height: 16),
+        Text(
+          "My Contributions:",
+          style: GoogleFonts.oswald(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "- Developed backend APIs for secure health data exchange.\n"
+          "- Led VAPT certifications to ensure data security.\n"
+          "- Integrated ABHA for seamless health information access.\n"
+          "- Migrated backend services to Azure Functions for scalability.\n"
+          "- Utilized Power Automate for workflow automation.\n"
+          "- Led sprints, mentored team members, and managed stakeholder interactions.\n",
+          style: TextStyle(color: kCaptionColor),
+        ),
+      ],
+    ),
+    actions: [
+      TextButton(
+        onPressed: () => Navigator.pop(context, 'OK'),
+        child: const Text(
+          'OK',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    ],
+  );
 }

@@ -17,7 +17,7 @@ List<CarouselItemModel> carouselItems = List.generate(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "FULL-STACK ENGINEER",
+              "TECH LEAD / SOFTWARE ENGINEER",
               style: GoogleFonts.oswald(
                 color: kPrimaryColor,
                 fontWeight: FontWeight.w900,
@@ -40,7 +40,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               height: 10.0,
             ),
             Text(
-              "Full-stack developer, based in Canada",
+              "Application Developer, based in Canada",
               style: TextStyle(
                 color: kCaptionColor,
                 fontSize: 15.0,

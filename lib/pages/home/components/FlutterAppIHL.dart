@@ -194,6 +194,24 @@ class FlutterAppIHL extends StatelessWidget {
                                 ],
                               ),
                             ),
+                            TextButton(
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      _buildIHLMobileAppDetailsDialog(context),
+                                );
+                              },
+                              child: MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: Text(
+                                  "Know More >>>",
+                                  style: TextStyle(
+                                    color: kPrimaryColor,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         )
                       ],
@@ -207,4 +225,61 @@ class FlutterAppIHL extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _buildIHLMobileAppDetailsDialog(BuildContext context) {
+  return AlertDialog(
+    backgroundColor: kBackgroundColor,
+    title: Text(
+      "Project Details",
+      style: GoogleFonts.oswald(
+        color: Colors.white,
+        fontWeight: FontWeight.w900,
+      ),
+    ),
+    content: Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Project Name: H-Care Mobile App",
+          style: GoogleFonts.oswald(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "Description: A comprehensive mobile health monitoring app that integrates with health services to provide real-time health data visualization, teleconsultation, and personalized health tracking.",
+          style: TextStyle(color: kCaptionColor),
+        ),
+        SizedBox(height: 16),
+        Text(
+          "My Contributions:",
+          style: GoogleFonts.oswald(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "- Developed real-time data visualization for health metrics.\n"
+          "- Integrated teleconsultation using Jitsi for secure video conferencing.\n"
+          "- Created features like health and food journals, step tracking, and health challenges.\n"
+          "- Configured Firebase for notifications and real-time data sync.\n"
+          "- Managed app rollout for both Play Store and App Store.\n",
+          style: TextStyle(color: kCaptionColor),
+        ),
+      ],
+    ),
+    actions: [
+      TextButton(
+        onPressed: () => Navigator.pop(context, 'OK'),
+        child: const Text(
+          'OK',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    ],
+  );
 }

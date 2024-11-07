@@ -188,6 +188,25 @@ class FlutterAppRoobai extends StatelessWidget {
                                       ),
                                     ),
                                   ),
+                                  TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) =>
+                                            _buildRoobaiMigrationDetailsDialog(
+                                                context),
+                                      );
+                                    },
+                                    child: MouseRegion(
+                                      cursor: SystemMouseCursors.click,
+                                      child: Text(
+                                        "Know More >>>",
+                                        style: TextStyle(
+                                          color: kPrimaryColor,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -204,4 +223,59 @@ class FlutterAppRoobai extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _buildRoobaiMigrationDetailsDialog(BuildContext context) {
+  return AlertDialog(
+    backgroundColor: kBackgroundColor,
+    title: Text(
+      "Project Details",
+      style: GoogleFonts.oswald(
+        color: Colors.white,
+        fontWeight: FontWeight.w900,
+      ),
+    ),
+    content: Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Project Name: Roobai Native to Flutter Migration",
+          style: GoogleFonts.oswald(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "Description: Migration of an e-commerce platform from native mobile development to Flutter, enhancing performance and feature consistency across platforms.",
+          style: TextStyle(color: kCaptionColor),
+        ),
+        SizedBox(height: 16),
+        Text(
+          "My Contributions:",
+          style: GoogleFonts.oswald(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          "- Independently migrated the app from native to Flutter within a tight timeline.\n"
+          "- Implemented additional features for improved user engagement.\n"
+          "- Optimized the app’s performance and ensured consistency across iOS and Android.\n",
+          style: TextStyle(color: kCaptionColor),
+        ),
+      ],
+    ),
+    actions: [
+      TextButton(
+        onPressed: () => Navigator.pop(context, 'OK'),
+        child: const Text(
+          'OK',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    ],
+  );
 }
