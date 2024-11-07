@@ -10,8 +10,13 @@ final GlobalKey ExperienceSectionKey = GlobalKey();
 final List<Experience> ExperienceList = [
   Experience(
     description:
+        "Leading the team with current project development of Aila Money, a secure, user-friendly financial app that empowers users to manage their finances efficiently.",
+    period: "2024 - PRESENT Technical Lead at G19 Studio",
+  ),
+  Experience(
+    description:
         "Enhanced development efficiency by 30% through cross-functional collaboration and Agile methodologies. Led R&D in Generative AI and designed backend systems with C#/.NET, robust APIs, and error handling. Directed a secure healthcare data consent management project, ensuring privacy and compliance.",
-    period: "2023 - PRESENT Senior Full Stack Engineer at India Health Link",
+    period: "2023 - 2024 Assistant Engineering Manager at India Health Link",
   ),
   Experience(
     description:

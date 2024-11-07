@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -117,10 +118,34 @@ class BackednAd extends StatelessWidget {
                   ),
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                    child: Image.asset(
-                      "assets/laptop.png",
-                      // Set width for image on smaller screen
-                      width: constraints.maxWidth > 720.0 ? null : 350.0,
+                    child: CarouselSlider(
+                      options: CarouselOptions(
+                        height: constraints.maxWidth > 720.0 ? null : 350.0,
+                        autoPlay: true,
+                        autoPlayInterval: Duration(seconds: 2),
+                        aspectRatio: 1.5,
+                        enlargeCenterPage: true,
+                      ),
+                      items: [
+                        "assets/laptop.png",
+                        "assets/hpod/images-0.jpg",
+                        "assets/hpod/images-1.jpg",
+                        "assets/hpod/images-2.jpg",
+                        "assets/hpod/images-3.jpg",
+                        "assets/hpod/images-4.jpg",
+                        "assets/hpod/images-5.jpg",
+                        "assets/hpod/images-6.jpg",
+                      ].map((imagePath) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Image.asset(
+                              imagePath,
+                              width:
+                                  constraints.maxWidth > 720.0 ? null : 350.0,
+                            );
+                          },
+                        );
+                      }).toList(),
                     ),
                   ),
                 ],

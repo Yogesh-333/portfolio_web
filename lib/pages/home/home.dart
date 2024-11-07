@@ -1,3 +1,4 @@
+import 'package:YK_portfolio/pages/home/components/FlutterAppRoobai.dart';
 import 'package:YK_portfolio/pages/home/components/Links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -7,7 +8,7 @@ import 'package:YK_portfolio/pages/home/components/education_section.dart';
 import 'package:YK_portfolio/pages/home/components/experience_section%20.dart';
 import 'package:YK_portfolio/pages/home/components/footer.dart';
 import 'package:YK_portfolio/pages/home/components/header.dart';
-import 'package:YK_portfolio/pages/home/components/FlutterAppAd.dart';
+import 'package:YK_portfolio/pages/home/components/FlutterAppIHL.dart';
 import 'package:YK_portfolio/pages/home/components/portfolio_stats.dart';
 import 'package:YK_portfolio/pages/home/components/skill_section.dart';
 import 'package:YK_portfolio/pages/home/components/testimonial_widget.dart';
@@ -96,7 +97,7 @@ class Home extends StatelessWidget {
                     Carousel(),
                     SizedBox(height: 20.0),
                     CvSection(),
-                    FlutterAppAd(),
+                    FlutterAppIHL(),
                     SizedBox(height: 70.0),
                     BackednAd(),
                     Padding(
@@ -104,6 +105,8 @@ class Home extends StatelessWidget {
                       child: PortfolioStats(),
                     ),
                     SizedBox(height: 50.0),
+                    FlutterAppRoobai(),
+                    SizedBox(height: 70.0),
                     EducationSection(),
                     SizedBox(height: 50.0),
                     SkillSection(),

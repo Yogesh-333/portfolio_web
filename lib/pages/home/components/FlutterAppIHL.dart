@@ -9,7 +9,7 @@ import 'package:YK_portfolio/utils/screen_helper.dart';
 
 final GlobalKey FlutterAppAdKey = GlobalKey();
 
-class FlutterAppAd extends StatelessWidget {
+class FlutterAppIHL extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

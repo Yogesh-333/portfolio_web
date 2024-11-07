@@ -8,7 +8,8 @@ import 'package:YK_portfolio/utils/screen_helper.dart';
 final GlobalKey CarouselKey = GlobalKey();
 
 class Carousel extends StatelessWidget {
-  final CarouselController carouselController = CarouselController();
+  final CarouselSliderController carouselController =
+      CarouselSliderController();
   @override
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *

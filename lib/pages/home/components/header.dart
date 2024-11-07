@@ -2,7 +2,7 @@ import 'package:YK_portfolio/pages/home/components/carousel.dart';
 import 'package:YK_portfolio/pages/home/components/education_section.dart';
 import 'package:YK_portfolio/pages/home/components/experience_section%20.dart';
 import 'package:YK_portfolio/pages/home/components/footer.dart';
-import 'package:YK_portfolio/pages/home/components/FlutterAppAd.dart';
+import 'package:YK_portfolio/pages/home/components/FlutterAppIHL.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
